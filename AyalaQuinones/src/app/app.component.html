@@ -1,0 +1,24 @@
+<!-- <app-ayala></app-ayala> -->
+
+<mat-toolbar color="accent">
+  <mat-icon>menu</mat-icon>
+  <button mat-button [matMenuTriggerFor]="menuEquipaje">Equipaje</button><!-- definimos y abajo usamos -->
+</mat-toolbar>
+
+<mat-menu #menuEquipaje="matMenu"><!-- usamos el nombre usado arriba -->
+  <button mat-menu-item routerLink="/ayala/nuevo">Registrar 
+    <mat-icon aria-hidden="false" aria-label="Icono de maleta" >
+      <i class="fa-solid fa-suitcase"></i>
+    </mat-icon>
+
+  </button>
+  <button mat-menu-item routerLink="/ayala">Listar 
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">
+      
+    </mat-icon></button>
+
+  <!-- Agrega más elementos de menú si es necesario -->
+</mat-menu>
+
+
+<router-outlet></router-outlet>
